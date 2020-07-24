@@ -1,0 +1,146 @@
+git init	 
+git status
+git branch master
+git add --a
+git add <file_name>
+git commit -m 'initial commit'
+git log
+rm -rf .git # to finish git repo
+ls
+.gitignore
+git diff
+git diff --staged
+git commit -a -m 'comment'
+git log --pretty=oneline
+git log --pretty=short
+git log --since = 2.days
+git log -since= 2.weeks
+git log --since= 2.months
+git log --since= 2.years
+git log --pretty = formate: '%h == %an'
+git log -p -2
+git commit --amend
+git restore --staged <file_name>
+git checkout -- <file_name>
+git checkout -f
+git remote
+git config --global alias.st status
+git restore <file_name>
+git checkout <branch_name>
+git branch
+git branch -d <branch_name>
+git branch -D <branch_name>
+git branch -v
+git branch --merged
+git branch --no--merged
+
+
+
+
+====git config --global alias.st status=== 
+
+it is very important to know that is to give 
+alias to command 
+for example:
+	git config --global alias.st status
+
+so using it we have given short name of status as st now everytime we can call it 
+by st
+
+	git config --global alias.st 'restore --staged --'
+==========================================
+
+===========git remote===================
+
+git remote add origin git@github.com:sanjaysheel/repo_name.git
+
+
+https://docs.github.com/en/github/using-git/which-remote-url-should-i-use
+
+https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
+==========git checkout -f=============
+
+if you run this command so it will go back all of your changed files for go one step back mean old one it will show while removing present one
+=====================================
+
+
+
+
+
+
+
+
+
+
+======git checkout -- <file_name>======
+
+
+let suppose you have edited some file 
+and you have miss some important lines
+ and now you want old one for this file
+  so write this command and see it 
+  will put last file in front of you
+
+=====================================
+
+
+
+
+
+
+
+==============git diff==============
+
+
+it only show the diff of working dir
+with staging area
+=====================================
+
+
+
+
+
+
+
+
+============git ignore=============
+
+now if you want to ignore file 
+so make .gitignore 
+open it and in this file 
+write file name
+if same .extension is more then ones 
+and same .extension you want to ignore
+so open .gitignore
+so it will ignore all .extension
+	
+and same for file name <dir> and you want to ignore so open .gitignore and write dir/
+so it will ignore this file
+and if any another folder is having any <dir>
+folder so whole <dir> folder will be ignore because of dir folder it is having
+
+and if you want only root <dir> should ignore now any folder is having that one so open
+.gitignore file and write '/dir/'
+now it will ignore root folder now for inside folder of dir
+=====================================
+
+
+
+
+
+
+
+
+
+============git  add ==============
+
+all are untracked files
+
+means now i want to stage
+
+git add to make it staged 
+
+modified means it is tracked 
+====================================
+
