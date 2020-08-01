@@ -52,7 +52,11 @@ by st
 
 ===========git remote===================
 
-git remote add origin git@github.com:sanjaysheel/repo_name.git
+git remote add origin https://github.com/sanjaysheel/my-prosonal-notes.git
+
+git fetch
+
+git pull origin master
 
 
 https://docs.github.com/en/github/using-git/which-remote-url-should-i-use
