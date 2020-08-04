@@ -1,0 +1,226 @@
+<html>
+                <head>
+                <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                <title>035 display none vs visibility hidden</title>
+                </head>
+                <body>
+                <div class="container">
+                <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <p class="lead"><p>We had a look at <code>display: none;</code>  - this value removes the element to which you apply it from the document flow. This means that the element is not visible and it also doesn't "block its position". Other elements can (and will) take its place instead.</p>
+
+<p>There is an alternative to that though.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>If you only want to hide an element but you want to keep its place (i.e. other elements don't fill the empty spot), you can use <code>visibility: hidden;</code> </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>Here's a visual example:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<pre class="prettyprint linenums">.box-1 {
+    display: none;
+}
+
+.box-2 {
+    display: inline-block;
+}</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>Will render:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><code>x</code>  </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>where <code>x</code>  has the class <code>box-2</code> . The first element just isn't displayed. <strong>It's still part of the DOM though</strong>, you can still access it via JavaScript for example.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>Here's an example for <code>visibility: hidden</code> :</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<pre class="prettyprint linenums">.box-1 {
+    visibility: hidden;
+}
+
+.box-2 {
+    display: inline-block;
+}</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>Will render:</p>
+
+
+
+
+
+
+
+<p><code>_x</code> </p>
+
+
+
+
+
+
+
+<p>where <code>_</code>  simply is an empty spot and <code>x</code>  has the class <code>box-2</code> .</p><p>The element is only invisible, <strong>it's not removed from the document flow and of course also not from the DOM.</strong></p></p>
+                </div>
+                </div>
+                </div>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                </body>
+                </html>
