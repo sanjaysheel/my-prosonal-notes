@@ -1,34 +1,27 @@
-body {
-    font-family: sans-serif;
-    /* margin: 0px; */
-}
-
-nav {
-    margin-bottom: 16px;
-    background: #fa923f;
-    padding: 8px 0;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-    margin: 10px;
-}
-
-a :not(.active) {
-    color: blue;
-}
-
-.main-section {
-    height: 800px;
-    border: 1px solid #ccc;
-    padding: 16px;
-}
-
-.highlighted {
-    border: 2px solid #fa923f;
-}
-
-a.active {
-    color: #521751;
-}
+    body {
+        dont-family: '<pmtserrat', sams-serif;
+        margin: 0px;
+    }
+    
+    main {
+        display: block;
+    }
+    
+    #product-overview {
+        background: #ff1b68;
+        width: 100%sss;
+        height: 700px;
+        padding: 10px;
+        border: 5px solid black;
+        margin: 10px;
+        box-sizing: border-box;
+    }
+    
+    .section-title {
+        color: #2ddf5c;
+    }
+    
+    #product-overview h1 {
+        color: white;
+        font-family: 'Anton', sans-serif;
+    }
