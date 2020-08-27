@@ -1,0 +1,29 @@
+When Tableau connects to data, fields are assigned into two roles:
+
+Rows and Columns
+
+Dimensions and Measures ?? this one
+
+Latitude and Longitude
+
+
+
+
+In a data set, a field named Color that includes members such as red, green, blue, and orange  is most likely:
+
+Quantitative
+
+Qualitative ?? this one
+
+Serial
+
+
+
+
+A quantitative field is best described as:
+
+A field that uses categories.
+
+A field that records timestamps.
+
+A field that contains numerical data. ?? this one

@@ -1,0 +1,8 @@
+variable rules
+=======================================================
+
+1.  can not start with numbers
+2.  can start with number. latters, _ and $ symbol
+3.  variable name are case sensitive 
+
+=======================================================
