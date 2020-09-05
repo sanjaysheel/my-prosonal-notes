@@ -5,4 +5,42 @@ variable rules
 2.  can start with number. latters, _ and $ symbol
 3.  variable name are case sensitive 
 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+how can we declare variable
 =======================================================
+
+-------------
+1. var
+--------------
+by using var  we can declare variable
+can not start with numbers
+can start with latter, number or $
+are can sensitive
+we can also use _ in variable in both side as well
+
+
+--------------
+2. const
+--------------
+
+
+important point   ======    It will give an error  if you try to change const variable  
+by using var  we can declare variable
+can not start with numbers
+can start with latter, number or $
+are can sensitive
+we can also use _ in variable in both side as well
+
+-------------
+3. let
+-------------
+
+
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
