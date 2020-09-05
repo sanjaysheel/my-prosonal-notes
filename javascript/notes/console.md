@@ -1,19 +1,26 @@
->   **All console  type**
-    console.assert()
+>   **All console  type**<br>
+    **console.assert()**
     Log a message and stack trace to console if the first argument is false.
-    console.clear()
+
+    **console.clear()**
     Clear the console.
-    console.count()
+
+    **console.count()**
     Log the number of times this line has been called with the given label.
-    console.countReset()
+    
+    **console.countReset()**
     Resets the value of the counter with the given label.
-    console.debug()
+    
+    **console.debug()**
     Outputs a message to the console with the log level debug.
-    console.dir()
+    
+    **console.dir()**
     Displays an interactive listing of the properties of a specified JavaScript object. This listing lets you use disclosure triangles to examine the contents of child objects.
-    console.dirxml()
+    
+    **console.dirxml()**
     Displays an XML/HTML Element representation of the specified object if possible or the JavaScript Object view if it is not possible.
-    console.error()
+    
+    **console.error()**
     Outputs an error message. You may use string substitution and additional arguments with this method.
     console.exception()  
     An alias for error().
