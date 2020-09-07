@@ -38,9 +38,37 @@ we can also use _ in variable in both side as well
 3. let
 -------------
 
-
+use in block as for local variable
 
 
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Data Type in javascript
+===============================================================
+
+DataType
+    1. primitive DataType (memory allocation in stack)
+        1. string
+        2. numbers
+        3. boolean
+        4. null
+        5. unordered
+        6. symbol
+
+    2. reference DataType (memory allocation in heap)
+        1. Arrays
+        2. Object literals
+        3. Functions
+        4. Dates
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
+
+

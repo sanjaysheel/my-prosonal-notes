@@ -65,7 +65,95 @@
 
 
 
+// // string
+// let city = 'abc';
+// console.log('hello', city)
+// console.log('hello', typeof city)
 
 
 
-console.assert
+// // numbers
+// let city1 = 2;
+// console.log('hello', city1)
+// console.log('hello', typeof city1)
+
+
+
+// // boolean
+// let city2 = true;
+// console.log('hello', city2)
+// console.log('hello', typeof city2)
+
+
+
+
+
+
+// // null
+// let city3 = null;
+// console.log('hello', city3)
+// console.log('hello', typeof city3)
+
+
+
+
+
+// // undefined
+// let city4 = undefined;
+// console.log('hello', city4)
+// console.log('hello', typeof city4)
+
+
+
+
+
+// reference Data Type
+
+
+// myarr = [1, 2, 3, 4]
+// console.log("Data type is" + (typeof myarr))
+
+
+// myarr1 = [false, false, true]
+// console.log("Data type is" + (typeof myarr1))
+
+// myarr3 = ['false, false, true', 'hello']
+// console.log("Data type is" + (typeof myarr3))
+
+// myarr4 = ['false', 1, 2, 3, 4, true, false]
+// console.log("Data type is" + (typeof myarr4))
+
+
+
+
+
+
+
+
+
+
+
+// let marks = {
+//     harry: 34,
+//     shubham: 36,
+//     rakesh: 32
+// }
+// console.log(marks)
+// console.log(typeof marks)
+
+
+
+let marks = {
+    harry: 34,
+    shubham: 36,
+    rakesh: 32
+}
+console.log(marks)
+console.log(typeof marks)
+
+function findname() {
+
+}
+console.log('function typ: ', (typeof findname))
+console.log(marks)
+console.log(typeof marks)
