@@ -1,14 +1,30 @@
-# Write a function primeFactors that accepts an integer parameter n (where n >=2) and print all the prime factors of n. 
+# def prime_factors(n):
+#     i = 2
+#     factors = []
+#     while i * i <= n:
+#         if n % i:
+#             i += 1
+#         else:
+#             n //= i
+#             factors.append(i)
+#     if n > 1:
+#         factors.append(n)
+#     [print(i) for i in factors]
+  
+# print(prime_factors(24))
 
 
-def primeFactors(n):
-  for i in range(2,n+1):
-    for j in range(2,i):
-      if (i % j) == 0:
-        break
-    else:
-      print(i)
 
 
-inp=int(input())
-primeFactors(inp)
+
+
+
+
+# def largest_prime_factor(n):
+#     i = 2
+#     while i * i <= n:
+#         if n % i:
+#             i += 1
+#         else:
+#             n //= i
+#     return n

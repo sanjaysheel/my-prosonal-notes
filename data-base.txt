@@ -1,0 +1,92 @@
+what is data?
+==============================================================================================
+
+Before we understand databases, we need to understand the concept of data. Data is collection of facts about the object of interest. For e.g. data about an employee would include information like name, address, age, educational qualifications etc. Software Applications need to store data as it is required to answer a question e.g. how many employees are above 40 years of age? Data is also required to convey a story e.g. why are we successful as an organization?
+
+Data is raw, just a set of facts which by itself does not convey anything. We need to understand patterns between factual data and give it a meaning. This is called information which helps us with answers to questions like who, when, what, where etc. Synthesis of data and information leads us to answer the how question and take business decisions. This is referred to as Knowledge.
+
+
+
+
+================================================================================================
+
+
+------------------------------------------------------------------------------------------------
+
+requirements from data?
+
+------------------------------------------------------------------------------------------------
+
+
+Software Applications that use data are expected to meet several requirements from end users. Let us take the example of Facebook application.
+
+Requirement	Description
+Integrity	Data should be accurate e.g. my facebook profile should contain valid country name.
+Availability	I should be able to access facebook and see my data at all times.
+Security	Only my friends should be able to see my posts and no one else.
+Independent of Application	I should be able to access the same data from my Android app as well as from web browser on my laptop.
+Concurrent	All my friends should be able to see my posts at the same time.
+
+
+
+
+
+
+==================================================================================================
+
+
+
+
+--------------------------------------------------------------------------------------------------
+
+limitations of flat files?
+
+--------------------------------------------------------------------------------------------------
+
+
+
+Data is stored in flat files and can be accessed using any programming language. The file based approach suffers following problems:
+
+1.	Dependency of program on physical structure of data
+2.	Complex process to retrieve data
+3.	Loss of data on concurrent access
+4.	Inability to give access based on record (Security)
+5.	Data redundancy
+
+
+==================================================================================================
+
+--------------------------------------------------------------------------------------------------
+
+databse system
+--------------------------------------------------------------------------------------------------
+
+
+A Database is a shared collection of logically related data and description of these data, designed to meet the information needs of an organization
+
+A Database Management System is a software system that enables users to define, create, maintain, and control access to the database. Database Systems typically have high cost and they require high end hardware configurations.
+
+An Application Program interacts with a database by issuing an appropriate request (typically a SQL statement)
+
+=============================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

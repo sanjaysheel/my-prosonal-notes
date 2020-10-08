@@ -1,0 +1,148 @@
+=======================================SQL===========================================
+
+structure query language is used to manage data in all relational databases like DB2, Oracle, SQL server etc. and standard are maintained by iso (internation standard of organization).
+
+-------------------SQL----------------------
+
+SQL (structure query language)
+	DDL (data defination language) {CADL}
+		1.  CREATE (create new data bases objects)
+		2.  ALTER (modify existing databases objects)
+		3.  DROP (delete existing databases objects)
+		4.  TRUNCATE (remove all rows from table)
+	DCL (data control language) {GR}
+		1. GRANT (provide access right on databases)
+		2. REVOKE (withdraw access right on databases)
+	DML (data manipulation language) {SDUI}
+		1. SELECT (retrive data from table)
+		2. DELETE (delete data from table)
+		3. UPDATE (modify data in table)
+		4. INSERT (create new rows in table)
+	TCL (trancsition control language) {CR}
+		1. COMMIT (save databases and end transaction)
+		2. ROLLBACK (undo changes that are not committed and end transaction)
+
+
+======================================================================
+
+ 						|| 							CHAR(n)	                                   				||                                 VARCHAR2(n)
+------------------------||----------------------------------------------------------------------------------||--------------------------------------------------------------------------------
+Useful for				||   Storing characters having pre-determined length								||   Storing characters whose length vary a lot
+Storage size 			||	 size for n characters															||   size for actual no. of characters + fixed size to store length
+Storage Characteristic	||   Trailing spaces are applied if data to be stored has smaller length than n.	||	 Trailing spaces are not applied.
+Maximum size			||   2000 bytes	4000 bytes															||	
+Example					||   A CHAR(10) field will store "Hello" as 10 bytes by appending 5 trailing spaces.||	A VARCHAR2(10) field will store "Hello" as 7 bytes (assuming 2 bytes to store 						  ||																				  ||		length).
+Alternate Name			||   CHARACTER(n)																	||   CHARACTER VARYING(n)
+
+
+
+=============================SQL NON INTEGRAL DATA TYPE===============================
+
+Non itegral data type have and integer part and fractional part. either number, decimal or Number data type can be use to store nonintegral numbers.
+ 	
+ 					NUMBER(3, 1)
+
+ 						3 -> PRECISION (it is total number of significant digits both before and after the decimal point) 
+ 						1 -> SCALE (it is the number of digit allowed after the decimal point)(it is not provided then number data type can be used to store integral values)
+
+ 		EXA<MPLE:
+ 				input 	|	DATA TYPE 	| stored value 	| exaplaination	
+ 				-------------------------------------------------
+ 				101.49  | INTEGER     	|  101.49 		| since the precision and scale is not given so it can store til 38 significant digit after deimal point
+ 				101.49  | INTEGER(3)    |  101	 		| here the precision is given and scale is not. So it will consider that it is zero mean i will round to zero decimal point
+ 				101.49  | INTEGER(5,2) 	|  101.49 		| Here 5-2=3 means 3-digits are allowed before decimal & 2-digits allowed after decimal point. Since number conforms to these rule, it is stored without any changes.
+IMPORTANT POINT: SQL performs rounding if user attempts to store a value that has higher scale than the data type
+
+=======================SQL DATA TYPES FOR DATE AND LARGE OBJECTS========================
+
+
+
+ Data Type	||			Useful for
+ --------------------------------------------------
+
+DATE	  || Storing date data where time portion is not required. For e.g. Date of Birth, Date of Joining a Company etc. The default format in which date needs to be specified is DD-MON-YY.	
+TIMESTAMP ||  Storing date data with precision up-to 1 billionth (9 digits) of a second. Timestamps are typically used as audit fields in database to record the exact time when a transaction occurred.
+CLOB (Character Large Object)	|| Storing large character based data which cannot be stored in VARCHAR2 due to its 4000 bytes size limit.
+BLOB (Binary Large Object)	 || Storing large binary data like movies, images with size up to 4GB.
+
+
+
+===================================SQL OPERATOR=======================================
+
+arithmatic operator
+	1. addition 		(+)
+	2. subtraction		(-)
+	3. multiplicatoin	(*)
+	4. division			(/)
+compairsion operator
+	1. equl to 			(=)
+	2. not equal 		(<>)
+	3. less then		(<)
+	4. greater then 	(>)
+	5. less then equal 	(<=)
+	6. greater then equal (>=)
+
+other compairision operator 
+	1. BETWEEN <lower limit> AND <upper limit>
+	2. LIKE (String pattern matching) 				-> 		SupplierId LIKE 'S%'
+	3. LIST											->		Dept IN ('IVS', 'ETA', 'ICP')
+	4. IS NULL 										->		Bonus IS NULL
+
+logical operator 
+	1. AND  (AND)	
+	2. OR 	(OR)	
+	3. NOT 	(NOT)	-> 	Returns TRUE if following condition is false
+
++---------------------------------------------------+
+|	differernce between python and sql operator 	|
++---------------------------------------------------+
+	
+__________________________________________________________________________________________________________
+   operation 		|				python					|						sql
+--------------------+---------------------------------------+---------------------------------------------
+	assignment 		|				=						|						=
+	eqal to 		|				==						|						=
+----------------------------------------------------------------------------------------------------------
+
+
+====================================SQL CREATE AND DROP============================================
+
+CREATE: This commmand are used to create table, and are arranged by rows and columns. each table must have name and columns and each column must have data type to determined the type of value that can be stored in. 
+
+					syntex: 
+								CREATE TABLE <TABLE NAME> (
+									STUDENT_ID INTEGER,
+									FNAME VARCHAR(10)
+								)
+
+				Example:
+
+								CREATE TABLE STUDENT (
+									STUDENT_ID INTEGER,
+									FNAME VARCHAR(10),
+									DOB DATE
+								)
+
+				explaination:  Here 	table_name = STUDENT
+										data type = INTEGER
+										STUDENT_ID = table name
+										size = 10 in varchar 
+
+
+
+DROP: statement is used to remove an existing table from the database.
+
+				syntex: 
+							DROP TABLE <table_name>;
+
+				example:	DROP TABLE student;										
+
+
+===============================================================================
+
+
+
+
+
+
+
