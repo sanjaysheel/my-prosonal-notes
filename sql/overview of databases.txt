@@ -73,6 +73,11 @@ foreign key
                 Additionally multiple rows in the child table can link to the same row of the parent table dependening upon the type of relationship.
 
 
-
+relationship
+-----------
+        1. realtionship are assiciated with one entity to another entity====> for example: computer is associated with employee
+        2. A relationship can be also exist between instance of entity =====> for example: employee report to another employee
+        3. There can be more than one relationship between entities===> for example: an Employee works in a Department while the head of department 
+                                                                                     (also an employee) manages a Department.
 
 
