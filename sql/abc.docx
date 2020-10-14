@@ -81,3 +81,86 @@ relationship
                                                                                      (also an employee) manages a Department.
 
 
+cardinality of relationship
+---------------------------
+        cardinality of relationship is the number of instance in one entity to the number of instance in another.
+                for example
+                -----------
+                        The relationship between computer and employee.
+                        which help us to ans that is how many computer are shared between employee. can employee exist without being allocated a computer etc.
+                            e.g.
+                            ----
+                               if 0 or 1 computer can be allocated to 0 or 1 employee then the cardinality of relationship between these two entities will be 1:1.
+                                Cardinality of relationships are of three types: 1:1, 1:N and M:N.
+                                
+                                A relationship with cardinality 1:1 is also called as one-to-one relationship or 1:1 relationship.
+                                Some entites in the context of Infosys are Employee, Computer, Project, Salaried Account. 
+                                Can you identify relationships and cardinality for these relationships?
+
+
+
+
+
+
+Crow foot notation
+------------------
+        Crow foot notationis one of the ways to represent cardinality of relationship in an ER Model. 
+        The notation comprises of four symbols and one of them need to be used for each entity in a relationship.
+
+
+                        --||------       ====>          Exactly one
+                        --|O------       ====>          zero or one
+                        -> -------       ====>          zero one or more
+                        ->|-------       ====>          one or More
+                        
+         Let us say the relationship between employee and 
+         computer is such that a computer must be allocated to one and only one employee but an employee can be allocated zero or any number of computers. 
+         Such a relationship is represented by the diagram below:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
