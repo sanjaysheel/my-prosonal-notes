@@ -1,0 +1,166 @@
+requirement of data 
+-------------------
+    1. data integraty : Data should be accurate e.g. my facebook profile should contain valid country name.
+    2. data availability : I should be able to access facebook and see my data at all times.
+    3. data security : Only my friends should be able to see my posts and no one else.
+    4. concurrent :  All my friends should be able to see my posts at the same time.
+    
+Data is stored in flat files and can be accessed using any programming language. The file based approach suffers following problems:
+------------------------------------------------------------------------------------------------------------------------------------
+  1. Dependency of program on physical structure of data
+  2. Complex process to retrieve data
+  3. Loss of data on concurrent access
+  4. Inability to give access based on record (Security)
+  5. Data redundancy
+  
+  
+function of DBMS
+----------------
+  1. utility : data import/export, data management, user login ,
+  2. integrity : data accuracy
+  3. security : access data to authenticated user 
+  4. data management : modifucation, store, retrive 
+  5. recovery : recovery of data no data lose
+  6. tracsaction support : ensure of notification to databases must either be successful or not to be done 
+  7. concurrency control : simulteneously all user access the data
+
+
+Terminology
+-----------
+    row == tuples == records =========> employee(id, name, dob)
+    attribute == columns == fields ========> employee(id, name, dob)
+
+    no of records == rows == tuples =======> cardinality of relations
+    The set of permitted values of an attribute is called =====>Domain
+
+
+candidate key:
+--------------
+    A candidate key are used to uniquely identify the single tuple in columns. 
+    for example:
+              right candidate key
+              -------------------
+                    1. employee_id
+                    2. name and bob
+                    3. aadharNo
+              not right candidate key for columns
+              ----------------------------------- 
+                    1. salary
+                    2. name 
+
+primary key
+-----------
+    A primary key are used to uniquely identify the typle in a relation 
+          mendatory ===> must uniquely identify the tuple and not allows null values 
+
+        When two or more columns together identify the unique row then
+        it's referred to as Composite Primary Key.
+        The combination of Name and DateOfBirth if selected as a primary key would be a composite primary key.
+
+
+foreign key
+-----------
+    foreign key are the set of one or more table in child table that required to match with parent table
+    foreign key are used to stablish the relationship between two table. here the parent class should be unique and primary and child table can be null 
+        
+        for example:
+        -----------
+                Computer is the parent table with CompId as the primary key.
+                Employee is the child table with Id as the primary key.
+                If we want to allocate a maximum of one computer to an employee then CompId must be made the foreign key in the Employee table. 
+                It can only contain values that are present in Computer table or no values at all.
+                We cannot allocate a computer that does not exist to an employee.
+                Additionally multiple rows in the child table can link to the same row of the parent table dependening upon the type of relationship.
+
+
+relationship
+-----------
+        1. realtionship are assiciated with one entity to another entity====> for example: computer is associated with employee
+        2. A relationship can be also exist between instance of entity =====> for example: employee report to another employee
+        3. There can be more than one relationship between entities===> for example: an Employee works in a Department while the head of department 
+                                                                                     (also an employee) manages a Department.
+
+
+cardinality of relationship
+---------------------------
+        cardinality of relationship is the number of instance in one entity to the number of instance in another.
+                for example
+                -----------
+                        The relationship between computer and employee.
+                        which help us to ans that is how many computer are shared between employee. can employee exist without being allocated a computer etc.
+                            e.g.
+                            ----
+                               if 0 or 1 computer can be allocated to 0 or 1 employee then the cardinality of relationship between these two entities will be 1:1.
+                                Cardinality of relationships are of three types: 1:1, 1:N and M:N.
+                                
+                                A relationship with cardinality 1:1 is also called as one-to-one relationship or 1:1 relationship.
+                                Some entites in the context of Infosys are Employee, Computer, Project, Salaried Account. 
+                                Can you identify relationships and cardinality for these relationships?
+
+
+
+
+
+
+Crow foot notation
+------------------
+        Crow foot notationis one of the ways to represent cardinality of relationship in an ER Model. 
+        The notation comprises of four symbols and one of them need to be used for each entity in a relationship.
+
+
+                        --||------       ====>          Exactly one
+                        --|O------       ====>          zero or one
+                        -> -------       ====>          zero one or more
+                        ->|-------       ====>          one or More
+                        
+         Let us say the relationship between employee and 
+         computer is such that a computer must be allocated to one and only one employee but an employee can be allocated zero or any number of computers. 
+         Such a relationship is represented by the diagram below:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
