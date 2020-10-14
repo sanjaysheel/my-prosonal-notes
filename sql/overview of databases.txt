@@ -1,0 +1,64 @@
+requirement of data 
+-------------------
+    1. data integraty : Data should be accurate e.g. my facebook profile should contain valid country name.
+    2. data availability : I should be able to access facebook and see my data at all times.
+    3. data security : Only my friends should be able to see my posts and no one else.
+    4. concurrent :  All my friends should be able to see my posts at the same time.
+    
+Data is stored in flat files and can be accessed using any programming language. The file based approach suffers following problems:
+------------------------------------------------------------------------------------------------------------------------------------
+  1. Dependency of program on physical structure of data
+  2. Complex process to retrieve data
+  3. Loss of data on concurrent access
+  4. Inability to give access based on record (Security)
+  5. Data redundancy
+  
+  
+function of DBMS
+----------------
+  1. utility : data import/export, data management, user login ,
+  2. integrity : data accuracy
+  3. security : access data to authenticated user 
+  4. data management : modifucation, store, retrive 
+  5. recovery : recovery of data no data lose
+  6. tracsaction support : ensure of notification to databases must either be successful or not to be done 
+  7. concurrency control : simulteneously all user access the data
+
+
+Terminology
+-----------
+    row == tuples == records =========> employee(id, name, dob)
+    attribute == columns == fields ========> employee(id, name, dob)
+
+    no of records == rows == tuples =======> cardinality of relations
+    The set of permitted values of an attribute is called =====>Domain
+
+
+candidate key:
+--------------
+    A candidate key are used to uniquely identify the single tuple in columns. 
+    for example:
+              right candidate key
+              -------------------
+                    1. employee_id
+                    2. name and bob
+                    3. aadharNo
+              not right candidate key for columns
+              ----------------------------------- 
+                    1. salary
+                    2. name 
+
+primary key
+-----------
+    A primary key are used to uniquely identify the typle in a relation 
+          mendatory ===> must uniquely identify the tuple and not allows null values 
+          
+
+
+
+
+
+
+
+
+
