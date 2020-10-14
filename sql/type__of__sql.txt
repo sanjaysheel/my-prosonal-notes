@@ -5,7 +5,7 @@ structure query language is used to manage data in all relational databases like
 -------------------SQL----------------------
 
 SQL (structure query language)
-	DDL (data defination language) {CADL}
+	DDL (data defination language) {CADT}
 		1.  CREATE (create new data bases objects)
 		2.  ALTER (modify existing databases objects)
 		3.  DROP (delete existing databases objects)
@@ -40,9 +40,9 @@ Alternate Name			||   CHARACTER(n)																	||   CHARACTER VARYING(n)
 
 Non itegral data type have and integer part and fractional part. either number, decimal or Number data type can be use to store nonintegral numbers.
  	
- 					NUMBER(3, 1)
+ 	NUMBER(3, 1)
 
- 						3 -> PRECISION (it is total number of significant digits both before and after the decimal point) 
+				3 -> PRECISION (it is total number of significant digits both before and after the decimal point) 
  						1 -> SCALE (it is the number of digit allowed after the decimal point)(it is not provided then number data type can be used to store integral values)
 
  		EXA<MPLE:
