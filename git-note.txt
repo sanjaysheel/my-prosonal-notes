@@ -52,11 +52,14 @@ by st
 
 ===========git remote===================
 
-git remote add origin https://github.com/sanjaysheel/my-prosonal-notes.git
+git remote add origin git@github.com:TheWorrier/flip.git
 
 git fetch
 
 git pull origin master
+
+git push --set-upstream origin master
+
 
 
 https://docs.github.com/en/github/using-git/which-remote-url-should-i-use
