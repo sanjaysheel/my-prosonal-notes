@@ -52,11 +52,25 @@ primary key
 -----------
     A primary key are used to uniquely identify the typle in a relation 
           mendatory ===> must uniquely identify the tuple and not allows null values 
-          
+
+        When two or more columns together identify the unique row then
+        it's referred to as Composite Primary Key.
+        The combination of Name and DateOfBirth if selected as a primary key would be a composite primary key.
 
 
-
-
+foreign key
+-----------
+    foreign key are the set of one or more table in child table that required to match with parent table
+    foreign key are used to stablish the relationship between two table. here the parent class should be unique and primary and child table can be null 
+        
+        for example:
+        -----------
+                Computer is the parent table with CompId as the primary key.
+                Employee is the child table with Id as the primary key.
+                If we want to allocate a maximum of one computer to an employee then CompId must be made the foreign key in the Employee table. 
+                It can only contain values that are present in Computer table or no values at all.
+                We cannot allocate a computer that does not exist to an employee.
+                Additionally multiple rows in the child table can link to the same row of the parent table dependening upon the type of relationship.
 
 
 
