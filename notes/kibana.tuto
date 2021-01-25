@@ -1,0 +1,37 @@
+intro to ELK stack
+    it is combination of 3 open source tools elasticsearch, logstash, kibana
+
+    elasticsearch --> it is apache lucene based search engine and it is open source and developed using java.
+    logstash --> it is pipeline for elasticsearch and also used for collecting and monitoring logs from remote machines.
+    kibana --> data exploration and visualization toolsand used for log and time series analytics application monitoring and operational intelligence.
+---------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

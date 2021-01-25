@@ -1,0 +1,73 @@
+Web scraping
+------------
+    Web scraping is also called 'crawing' or 'spidering' is the technique to gather data automatically 
+    from an online source it is very easy way to get large volume of data in relatively
+    in a sort time frame, it adds stress to the server where the source is hosted
+
+    This is also one of the main reason why manyu website don't allow scraping all on their website. 
+
+
+how web scraping is usefull?
+-----------------------------
+    web scraping can help us to extract an enormous of data about customers, products, people, stock, market etc.
+
+
+
+
+BeautifulSoup
+-------------
+    open source 
+    it pull the data out of html and xml documents 
+    begineers friendly because of it's good documentation and friendly users community
+    we can use it for multitasking 
+
+    disadvantage
+        it depends heavily on other libraries to work 
+        BeautifulSoup does not have capability of sending web request
+        it has not document parser.
+
+selenium   
+--------
+    it is very different from BeautifulSoup and srapy
+    mainly it is developed for web testing
+    it is used for web application automated testing
+    it can send web request
+
+    advantage
+        api is begineer friendly thats a reason for being popular in developer comomunity
+        it can easily work with the js (DOM)
+        it can easily handle ajex request
+
+
+selection
+---------
+    BeautifulSoup
+    -------------
+        low level complex project or small project 
+        it help us to maintain our code simple and flexible 
+
+        it is slow 
+        but it comes up with the multitasking concept
+
+        this library has a lot of dependencies in the ecosystem 
+        this is one the downsite of the library for a complex project
+    selenium
+    --------
+        when you are dealing with core js then selenium would be best choise.
+        and here data size should be limited
+
+        it can handle up to some range but not equivalent to srapy
+
+        it has good eco system for development
+        but 
+        the problem is we can not utilize the proxied very easily
+
+
+
+Conclusion
+----------
+    srapy  --> if you are dealing with complex Scraping operation that requires huge speed and with low power consumption then Scrapy would be a great choice.
+
+    beautifulsoap  --> Ifyou’re new to programmer want to work with web scraping projects then you should go for Beautiful Soup. you can easily learn it and able to perform the operations very quickly up to a certain level of complexity.
+    
+    selenium  --> When you want to deal with Core Javascript based web Applications and want to make browser automation with AJAX/PJAX Requests. then Selenium would be a great choice.

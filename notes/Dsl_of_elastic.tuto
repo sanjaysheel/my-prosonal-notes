@@ -1,0 +1,7 @@
+Dls of elasticsearch 
+--------------------
+
+
+
+The main task of dsl of elasticsearch is to wriing and runnig the queries against elasticsearch.
+it is very close to the elasticsearch json and are very conviniont way to write and manipulate the queries
