@@ -1,0 +1,230 @@
+
+=======================================================================================================
+---------------------------------------map reduce tutorial---------------------------------------------
+A MapReduce is a data processing tool which is used to process the data parallelly in a distributed form. 
+It was developed in 2004, on the basis of paper titled as 
+"MapReduce: Simplified Data Processing on Large Clusters," published by Google.
+
+The MapReduce is a paradigm which has two phases,
+ the mapper phase, and the reducer phase. In the Mapper,
+  the input is given in the form of a key-value pair.
+   The output of the Mapper is fed to the reducer as input. 
+   The reducer runs only after the Mapper is over. The reducer too takes input in key-value format,
+    and the output of reducer is the final output.
+
+Steps in Map Reduce
+The map takes data in the form of pairs and returns a list of <key, value> pairs. The keys will not be unique in this case.
+Using the output of Map, sort and shuffle are applied by the Hadoop architecture. This sort and shuffle acts on these list of <key, value> pairs and sends out unique keys and a list of values associated with this unique key <key, list(values)>.
+An output of sort and shuffle sent to the reducer phase. The reducer performs a defined function on a list of values for unique keys, and Final output <key, value> will be stored/displayed.
+
+
+
+
+=======================================================================================================
+save environment variable in .bash_profile  in centos 
+and save this variable 
+        # Set Java Path
+        export JAVA_HOME=/usr/java/default
+        export PATH=$PATH:$JAVA_HOME/bin
+
+        # Set Sqoop Path
+        export SQOOP_HOME=/usr/local/sqoop
+        export PATH=$PATH:$SQOOP_HOME/bin
+
+        # Set Hadoop Path
+        export HADOOP_MAPRED_HOME=/usr/local/hadoop
+        export PATH=$PATH:HADOOP_MAPRED_HOME/bin
+
+
+
+
+The parameter --map-column-java accepts a comma separated list where each item is a key-value pair separated by an equal sign.
+The exact column name is used as the key, and the target Java type is specified as the value. For example, if you need to change
+mapping in three columns c1 , c2 , and c3 to Float , String , and String , respectively
+        ====> sqoop import --map-column-java c1=Float,c2=String,c3=String
+
+
+
+Sqoop by default uses four concurrent map tasks to transfer data to Hadoop. Transfer‐
+ring bigger tables with more concurrent tasks should decrease the time required to
+transfer all data. You want the flexibility to change the number of map tasks used on a
+per-job basis. Use the parameter --num-mappers if you want Sqoop to use a different number of map‐
+pers.
+        ====> 
+
+
+Configuration files are stored in /etc/ and logs in /var/log
+
+to install in centos based os use this command 
+    $ sudo yum install sqoop
+
+To install Sqoop on an Ubuntu, Debian, or other deb -based system:
+    $ sudo apt-get install sqoop
+
+
+
+path of the Configuration file of sqoop 
+    /usr/local/sqoop/conf
+
+
+path of the sqoop-env-template.sh file  in sqoop container 
+    /usr/local/sqoop/conf
+    
+get all jar file in apache Sqoop
+    /usr/local/sqoop/lib/
+
+
+get all mail list
+        ====> http://bit.ly/123IEkk
+
+Most likely your question has already been
+asked, in which case you’ll be able to get an immediate answer by searching the archives.
+If it seems that your question hasn’t been asked yet, send it to
+        ====> user@sqoop.apache.org
+
+
+
+--connect , contains the JDBC URL to your databas
+
+
+
+    $HADOOP_COMMON_HOME
+
+  
+
+
+
+
+
+
+
+ssh connection configureation 
+        etc/ssh/sshd_config
+
+
+
+        
+
+
+
+about sqoop tool
+    codegen ====> It is basically used for java files
+    create-hive-table ====> It is basically used to create table inside the hive databases
+    eval ====> It is used for remote database and run query against it
+    export ====> It is used for exporting database from Hasdoop to RDBMS   
+    help ====> It is used to see the command information of sqoop
+    import ====> import are used for importing data from RDBMS to HDFS
+    import-all-tables =====> It is used for importing all tables from RDBMS to HDFS
+    import-mainframe ====> It is used for importing data from mainframe server to HDFS
+    job ====> by using it we can save our string of apache sqoop in the form of job and we can use it whenever we want to run the query
+    list-databases ====> list available databases on a server
+    list-table ====> list of available tables in a database
+    merge ====> 
+
+
+
+
+
+
+
+------------------------------SAVE PASSWORD INTO THE FILE-----------------------------------
+you can type any characters into the prompt and then press the Enter key once you are
+done. Sqoop will not echo any characters, preventing someone from reading the pass‐
+word on your screen. All entered characters will be loaded and used as the password
+(except for the final enter ). This method is very secure, as the password is not stored
+anywhere and is loaded on every Sqoop execution directly from the user. The downside
+is that it can’t be easily automated with a script.
+parameter --password-file , will load the password
+from any specified file on your HDFS cluster. In order for this method to be secure, you
+need to store the file inside your home directory and set the file’s permissions to 400 ,
+so no one else can open the file and fetch the password. This method for securing your
+password can be easily automated with a script and is the recommended option if you
+need to securely automate your Sqoop workflow. You can use the following shell and
+Hadoop commands to create and secure your password file:
+    echo "my-secret-password" > sqoop.password
+    hadoop dfs -put sqoop.password /user/$USER/sqoop.password
+    hadoop dfs -chown 400 /user/$USER/sqoop.password
+    sqoop import --password-file /user/$USER/sqoop.password
+
+
+
+
+
+------------------------------USE WHERE CLAUSE-----------------------------------
+Use the command-line parameter --where to specify a SQL condition that the imported
+data should meet. For example, to import only USA cities from the table cities , you
+can issue the following Sqoop command:
+    sqoop import \
+    --connect jdbc:mysql://mysql.example.com/sqoop \
+    --username sqoop \
+    --password sqoop \
+    --table cities \
+    --where "country = 'USA'"
+
+
+
+
+------------------------------Using a File Format Other Than CSV-----------------------------------
+Sqoop supports three different file formats; one of these is text, and the other two are
+binary. The binary formats are Avro and Hadoop’s SequenceFile . You can enable import
+into SequenceFile using the --as-sequencefile parameter:
+        sqoop import \
+        --connect jdbc:mysql://mysql.example.com/sqoop \
+        --username sqoop \
+        --password sqoop \
+        --table cities \
+        --as-sequencefile
+
+    Avro can be enabled by specifying the --as-avrodatafile parameter:
+            sqoop import \
+            --connect jdbc:mysql://mysql.example.com/sqoop \
+            --username sqoop \
+            --password sqoop \
+            --table cities \
+            --as-avrodatafile
+
+
+
+------------------------------Compressing Imported Data-----------------------------------
+You want to decrease the overall size occupied on HDFS by using compression for
+generated files.
+        sqoop import \
+        --connect jdbc:mysql://mysql.example.com/sqoop \
+        --username sqoop \
+        --table cities \
+        --compress
+
+
+
+------------------------------Speeding Up Transfers-----------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://buildmedia.readthedocs.org/media/pdf/airflow/1.10.1/airflow.pdf
+
+
+sqoop import  --map-column-java "created_at=String,updated_at=String"    --connect jdbc:postgresql://111.118.241.68:5431/nyc_taxi     --username postgres     --password 47Billion  --query "select * from yellow_taxi_trip where \$CONDITIONS and ((created_at > (select 'now'::timestamp - interval '3 day')) or (updated_at > (select 'now'::timestamp - interval '3 day')));"  -m 1 --target-dir file:///jdbc/nyc/raw_zone/trips/$(date '+%Y')/$(date '+%b')/$(date '+%d')/heee1201 --as-parquetfile  --enclosed-by '\"'
+
+sqoop import  -Duser.timezone=GMT --connect jdbc:postgresql://172.17.0.4:5432/alpha --username postgres --password mysecretpassword --query  "select * from person;" -m 1 --target-dir file:///jdbc/nyc/raw_zone/trips/$(date '+%Y')/$(date '+%b')/$(date '+%d')/heee1202    --as-parquetfile  --enclosed-by '\"'
+
+
+
+
+
+sqoop import   --map-column-java "created_at=String,updated_at=String,tpep_pickup_datetime=String,tpep_dropoff_datetime=String"    --connect jdbc:postgresql://111.118.241.68:5431/nyc_taxi     --username postgres     --password 47Billion  --query "select * from yellow_taxi_trip where \$CONDITIONS and ((created_at > (select 'now'::timestamp - interval '3 day')) or (updated_at > (select 'now'::timestamp - interval '3 day')));"  -m 1 --target-dir file:///jdbc/nyc/raw_zone/trips/$(date '+%Y')/$(date '+%b')/$(date '+%d')/E3333 --as-parquetfile  --enclosed-by '\"'
+
+
+
+sqoop import  --map-column-java "created_at=String,updated_at=String,tpep_pickup_datetime=String,tpep_dropoff_datetime=String"   --connect jdbc:postgresql://111.118.241.68:5431/nyc_taxi     --username postgres     --password 47Billion  --query "select * from yellow_taxi_trip where \$CONDITIONS and ((created_at > (select 'now'::timestamp - interval '1 day')) or (updated_at > (select 'now'::timestamp - interval '1 day')));"  -m 1 --target-dir file:///jdbc/nyc/raw_zone/trips/$(date '+%Y')/$(date '+%b')/$(date '+%d')  --as-parquetfile --enclosed-by '\"'
