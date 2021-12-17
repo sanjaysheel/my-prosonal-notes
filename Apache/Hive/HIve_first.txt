@@ -1,1 +1,69 @@
-=========================== What is Hive? ===========================
+=============================================== What is Hive? ===============================================
+Apache Hive is an open source data warehouse system built on top of Hadoop Haused for querying and analyzing large datasets stored in Hadoop files.
+Hive use language called HiveQL (HQL), which is similar to SQL.
+HiveQL automatically translates SQL-like queries into MapReduce jobs.
+Hive abstracts the complexity of Hadoop. The main thing to notice is that there is no need to learn java for Hive.
+The Hive generally runs on your workstation and converts your SQL query into a series of jobs for execution on a Hadoop cluster
+Apache Hive organizes data into tables. This provides a means for attaching the structure to data stored in HDFS.
+
+
+
+
+=============================================== Apache History Hive ===============================================
+Data Infrastructure Team at Facebook developed Hive. 
+Apache Hive is also one of the technologies that are being used to address the requirements at Facebook.
+It is very popular with all the users internally at Facebook.
+It is being used to run thousands of jobs on the cluster with hundreds of users, for a wide variety of applications.
+Apache Hive-Hadoop cluster at Facebook stores more than 2PB of raw data. It regularly loads 15 TB of data on a daily basis.
+Now it is being used and developed by a number of companies like Amazon, IBM, Yahoo, Netflix, Financial Industry Regulatory Authority (FINRA) and many others.
+
+
+
+
+
+=============================================== Why Apache Hive? ===============================================
+Let’s us now discuss the need of Hive-
+Facebook had faced a lot of challenges before the implementation of Apache Hive.
+Challenges like the size of the data being generated increased or exploded, making it very difficult to handle them.
+The traditional RDBMS could not handle the pressure.
+As a result, Facebook was looking out for better options.
+To overcome this problem, Facebook initially tried using MapReduce.
+But it has difficulty in programming and mandatory knowledge in SQL, making it an impractical solution.
+    1. Schema flexibility and evolution
+    2. Tables can be portioned and bucketed
+    3. Apache Hive tables are defined directly in the HDFS
+    4. JDBC/ODBC drivers are available
+    
+
+
+
+
+=============================================== Hive Architecture ===============================================
+After the introduction to Apache Hive, Now we are going to discuss the major component of Hive Architecture. The Apache Hive components are-
+
+Metastore – It stores metadata for each of the tables like their schema and location. Hive also includes the partition metadata. This helps the driver to track the progress of various data sets distributed over the cluster. It stores the data in a traditional RDBMS format. Hive metadata helps the driver to keep a track of the data and it is highly crucial. Backup server regularly replicates the data which it can retrieve in case of data loss.
+
+Driver – It acts like a controller which receives the HiveQL statements. The driver starts the execution of the statement by creating sessions. It monitors the life cycle and progress of the execution. Driver stores the necessary metadata generated during the execution of a HiveQL statement. It also acts as a collection point of data or query result obtained after the Reduce operation.
+
+Compiler – It performs the compilation of the HiveQL query. This converts the query to an execution plan. The plan contains the tasks. It also contains steps needed to be performed by the MapReduce to get the output as translated by the query. The compiler in Hive converts the query to an Abstract Syntax Tree (AST). First, check for compatibility and compile-time errors, then converts the AST to a Directed Acyclic Graph (DAG).
+
+Optimizer – It performs various transformations on the execution plan to provide optimized DAG. It aggregates the transformations together, such as converting a pipeline of joins to a single join, for better performance. The optimizer can also split the tasks, such as applying a transformation on data before a reduce operation, to provide better performance.
+
+Executor – Once compilation and optimization complete, the executor executes the tasks. Executor takes care of pipelining the tasks.
+CLI, UI, and Thrift Server – CLI (command-line interface) provides a user interface for an external user to interact with Hive. Thrift server in Hive allows external clients to interact with Hive over a network, similar to the JDBC or ODBC protocols.
+
+
+
+
+
+
+===================================================== Hive feature =============================================================
+
+
+
+
+
+
+
+
+
