@@ -1,0 +1,17 @@
+Here are some of the great writers in data engineering
+
+Simon Späti -> https://sspaeti.com/
+
+Sarah Krasnik -> https://sarahsnewsletter.substack.com/
+
+infrastructure space.Vicki Boykis -> https://vickiboykis.com/
+
+Chris Riccomini -> https://cnr.sh/
+
+Joseph M. -> https://www.startdataengineering.com/post/
+
+Benn Stancil -> https://benn.substack.com/
+
+Ananth P. -> https://www.dataengineeringweekly.com/
+
+Daniel Beach -> https://www.confessionsofadataguy.com/
